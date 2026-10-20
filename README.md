@@ -1,4 +1,4 @@
-<h1 align="center">Hi, I'm IShachouI 👋</h1>
+<h1 align="center">Hi, I'm Yaseen 👋</h1>
 
 <p align="center">
   Computer Science &amp; Economics student at Pomona College.<br>
