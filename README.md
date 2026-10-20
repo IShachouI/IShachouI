@@ -5,6 +5,10 @@
   Interested in software engineering, AI, and building useful products.
 </p>
 
+<p align="center">
+  <a href="https://ishachoui.github.io/"><strong>🎣 Explore My Interactive Portfolio</strong></a>
+</p>
+
 ---
 
 ## Watch My Contributions Get Eaten 🐍
@@ -39,6 +43,10 @@
 
 ## Featured Projects
 
+- **[Mizanook](https://mizanook.com)** — Systematic investing research with an
+  emphasis on disciplined testing, risk awareness, and auditable, values-based
+  constraints. *(Flagship — research preview; not a registered adviser, no
+  performance claims.)*
 - **[Nudge](https://github.com/IShachouI/nudge-website)** — Social planning for friend groups.
   Live at [nudgesocial.app](https://nudgesocial.app).
 - **[Claremont Student Nutrition Tracker](https://github.com/IShachouI/Claremont-Student-Nutrition-Tracker)** —
