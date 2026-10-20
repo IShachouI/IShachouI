@@ -34,10 +34,11 @@ jobs:
           # - A classic PAT with the read-only `read:user` scope, stored as the
           #   SNK_GITHUB_TOKEN secret, makes the graph include ANONYMIZED private
           #   contribution counts (it authenticates as the profile owner).
-          # - If the secret is unset/empty, the action falls back to the default
-          #   GITHUB_TOKEN, which can only see PUBLIC contributions.
+          # - When the secret is unset it is an empty string (falsy), so the
+          #   `|| github.token` fallback selects the default Actions token, which
+          #   can only see PUBLIC contributions.
           # The token is never written to the SVGs, the README, or the repo.
-          github_token: ${{ secrets.SNK_GITHUB_TOKEN }}
+          github_token: ${{ secrets.SNK_GITHUB_TOKEN || github.token }}
           # One file per line. Query params customise palette / colors / background.
           # color_background=%2300000000 -> fully transparent (blends into any README).
           outputs: |
