@@ -51,9 +51,24 @@ repository's private status is changed.
 
 ## Rotating an expired or compromised token
 
-Classic PATs expire. When the token expires (or if you want to replace it), the
-workflow keeps running but silently falls back to public-only contributions
-until you supply a fresh token:
+Classic PATs expire. An **expired or revoked** `SNK_GITHUB_TOKEN` does **not**
+fall back to `github.token`: the secret still holds a nonempty string, so the
+`${{ secrets.SNK_GITHUB_TOKEN || github.token }}` expression keeps selecting that
+(now invalid) value. The action then tries to authenticate with the dead token,
+GitHub rejects it, and the generate step **fails** — so nothing is published and
+the previously generated SVGs on the `output` branch are left unchanged.
+
+The fallback to `github.token` only happens when the secret is **empty or
+absent**. So to recover, you must **replace or remove** the secret and then
+re-run the workflow:
+
+- **To restore private contributions** — replace the secret with a fresh token
+  (steps 1–4 below).
+- **To revert to public-only** — delete the `SNK_GITHUB_TOKEN` secret (repo →
+  **Settings → Secrets and variables → Actions → `SNK_GITHUB_TOKEN` → Remove**),
+  then re-run the workflow so it regenerates with `github.token`.
+
+To replace the token:
 
 1. Create a new classic PAT with **only `read:user`** (same as step 2 above).
 2. Update the secret in place — repo → **Settings → Secrets and variables →
