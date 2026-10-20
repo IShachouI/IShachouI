@@ -1,15 +1,8 @@
 <h1 align="center">Hi, I'm IShachouI 👋</h1>
 
-<!-- Customize this tagline to describe yourself. -->
 <p align="center">
-  <em>Developer building things that are correct, minimal, and a little bit playful.</em>
-</p>
-
-<p align="center">
-  <a href="https://github.com/IShachouI?tab=repositories">
-    <img alt="My repositories" src="https://img.shields.io/badge/explore-my%20repos-6e40c9?style=flat-square&logo=github&logoColor=white">
-  </a>
-  <!-- Add your own badges/links here, e.g. website, LinkedIn, email. -->
+  Computer Science &amp; Economics student at Pomona College.<br>
+  Interested in software engineering, AI, and building useful products.
 </p>
 
 ---
@@ -44,7 +37,9 @@
 
 ---
 
-<!--
-  Add more sections below as you like — About, Tech Stack, Featured Projects, Contact.
-  Keep it minimal so the snake stays the star of the show.
--->
+## Featured Projects
+
+- **[Nudge](https://github.com/IShachouI/nudge-website)** — Social planning for friend groups.
+  Live at [nudgesocial.app](https://nudgesocial.app).
+- **[Claremont Student Nutrition Tracker](https://github.com/IShachouI/Claremont-Student-Nutrition-Tracker)** —
+  Track and log meals across the Claremont Colleges dining halls. *(Java)*
